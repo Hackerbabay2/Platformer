@@ -163,6 +163,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _player: {fileID: 709456128}
+  _speed: 2
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -231,8 +232,8 @@ GameObject:
   - component: {fileID: 709456128}
   - component: {fileID: 709456127}
   - component: {fileID: 709456126}
-  - component: {fileID: 709456125}
   - component: {fileID: 709456129}
+  - component: {fileID: 709456125}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -253,7 +254,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.019098043, y: 0}
+  m_Offset: {x: 0.013972878, y: -0.047507763}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -264,7 +265,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.6840148, y: 1.503006}
+  m_Size: {x: 0.68141866, y: 1.4079905}
   m_EdgeRadius: 0
 --- !u!50 &709456126
 Rigidbody2D:
@@ -278,7 +279,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -365,7 +366,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 3
-  _jumpPower: 30
+  _jumpPower: 25
 --- !u!1 &872795556
 GameObject:
   m_ObjectHideFlags: 0
@@ -424,6 +425,7 @@ GameObject:
   - component: {fileID: 1520594860}
   - component: {fileID: 1520594859}
   - component: {fileID: 1520594858}
+  - component: {fileID: 1520594861}
   m_Layer: 0
   m_Name: Tilemap
   m_TagString: Untagged
@@ -3432,3 +3434,15 @@ TilemapCollider2D:
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0.00001
+--- !u!114 &1520594861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1520594854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1617a01c3d172245a533a1bbfe47a4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

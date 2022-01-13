@@ -5,9 +5,10 @@ using UnityEngine;
 public class FollowCamera : MonoBehaviour
 {
     [SerializeField] private Transform _player;
+    [SerializeField] private float _speed;
 
     private void Update()
     {
-        transform.position = Vector3.Lerp(transform.position, new Vector3(_player.position.x,_player.position.y,-10),2 * Time.deltaTime); 
+        transform.position = Vector3.Lerp(transform.position, new Vector3(_player.position.x,_player.position.y,-10),_speed * Time.deltaTime); 
     }
 }
