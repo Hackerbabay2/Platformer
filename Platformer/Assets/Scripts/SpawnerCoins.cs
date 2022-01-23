@@ -20,7 +20,7 @@ public class SpawnerCoins : MonoBehaviour
             {
                 _points.Add(_path.GetChild(i));
             }
-            StartCoroutine(SpawnCoins(_spawnTime));
+            StartCoroutine(Spawn(_spawnTime));
         }
         else
         {
@@ -28,7 +28,7 @@ public class SpawnerCoins : MonoBehaviour
         }
     }
 
-    private IEnumerator SpawnCoins(float duration)
+    private IEnumerator Spawn(float duration)
     {
         bool isSpawn = true;
         var waitForDuration = new WaitForSeconds(duration);

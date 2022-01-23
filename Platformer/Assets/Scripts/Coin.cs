@@ -7,16 +7,16 @@ using UnityEngine.UI;
 [RequireComponent(typeof(SpriteRenderer))]
 public class Coin : MonoBehaviour
 {
-    [SerializeField] private UnityEvent _isCollected;
+    [SerializeField] private UnityEvent _collected;
     [SerializeField] private float _duration;
 
-    private IEnumerator DestroyObjectForDuration(float duration)
+    private IEnumerator Pause(float duration)
     {
         var waitForDuration = new WaitForSeconds(duration);
 
         for (int i = 0; i < duration; i++)
         {
-            yield return waitForDuration;
+            yield return new WaitForSeconds(1);
         }
         Destroy(gameObject);
     }
@@ -25,8 +25,8 @@ public class Coin : MonoBehaviour
     {
         if (collision.gameObject.TryGetComponent(out Player player))
         {
-            _isCollected?.Invoke();
-            StartCoroutine(DestroyObjectForDuration(_duration));
+            _collected?.Invoke();
+            StartCoroutine(Pause(_duration));
         }
     }
 }

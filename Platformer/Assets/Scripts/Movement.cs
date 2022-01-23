@@ -12,7 +12,7 @@ public class Movement : MonoBehaviour
     private SpriteRenderer _spriteRenderer;
     private Animator _animator;
     private bool _isJump;
-    private readonly string Run = "Run";
+    private const string Run = "Run";
 
     private void Start()
     {
