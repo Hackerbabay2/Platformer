@@ -12,12 +12,8 @@ public class Coin : MonoBehaviour
 
     private IEnumerator Pause(float duration)
     {
-        var waitForDuration = new WaitForSeconds(duration);
-
-        for (int i = 0; i < duration; i++)
-        {
-            yield return new WaitForSeconds(1);
-        }
+        var wait = new WaitForSeconds(duration);
+        yield return wait;
         Destroy(gameObject);
     }
 
